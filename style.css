@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgb(67, 67, 67), rgb(36, 45, 71));
+}
+
+
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(95, 93, 93, 0.5)), url(background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0.2px);
+    border-radius: 15px;
+    width: 400px;
+    height: 500px;
+
+    padding: 25px;
+}
+
+.date .week {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.date .current-date {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 4px;
+}
+
+.container .search {
+    margin-top: 25px;
+}
+
+.container .search #cityInput {
+    padding: 15px;
+    width: 80%;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.container .search .submit {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 3px;
+    cursor: pointer;
+
+}
+
+.result {
+    width: 400px;
+    height: 460px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+}
+
+.result .temperature {
+    color: white;
+    font-size: 2rem;
+}
+
+.result .humidity {
+    color: white;
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+.result .temperature span{
+    margin-left: 80px;
+}
