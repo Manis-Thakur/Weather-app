@@ -22,17 +22,17 @@ body {
     border-radius: 15px;
     width: 400px;
     height: 500px;
-
     padding: 25px;
+    
 }
 
-.date .week {
+.date #week {
     color: white;
     font-size: 3rem;
     font-weight: bold;
 }
 
-.date .current-date {
+.date #current-date {
     color: white;
     font-size: 1.5rem;
     margin-top: 4px;
@@ -50,7 +50,7 @@ body {
     font-size: 1rem;
 }
 
-.container .search .submit {
+.container .search #submit {
     width: 60px;
     height: 60px;
     border: none;
@@ -60,25 +60,65 @@ body {
 
 }
 
+.container #errormsg{
+    color: hsl(0, 58%, 92%);
+    font-size: 2rem;
+    text-align:center;
+    margin-top: 35px;
+
+}
+
+/* second section */
 .result {
     width: 400px;
     height: 460px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px 40px;
     background-color: rgb(34, 34, 34);
 }
 
-.result .temperature {
+.result #cityname{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.result .wind {
+    display: flex;
+    justify-content: space-between;
     color: white;
     font-size: 2rem;
+    margin-top: 20px;
 }
 
 .result .humidity {
+    display: flex;
+    justify-content: space-between;
     color: white;
     font-size: 2rem;
     margin-top: 15px;
 }
 
-.result .temperature span{
-    margin-left: 80px;
+
+.result .description{
+    color: white;
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+.result .icons{
+    margin-top: 25px;
+}
+
+.result .icons #temperature{
+    color: white;
+    font-size: 2rem;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.result .icons #weather-dis{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 10px;
 }

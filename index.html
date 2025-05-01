@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Icons" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container">
         <div class="date">
-            <p class="week">sunday</p>
-            <p class="current-date">20 jan 2025</p>
+            <p id="week"></p>
+            <p id="current-date"></p>
         </div>
 
         <div class="search">
             <input type="text" placeholder="enter city" id="cityInput">
-            <button class="submit"><i class="material-icons">
-                search
-            </i></button>
+            <button id="submit"><i class="material-symbols-outlined">
+                    search
+                </i></button>
         </div>
+        <p id="errormsg"></p>
     </div>
 
     <div class="result">
+        <h2 id="cityname"></h2>
+        <div class="wind">Wind <span id="wind"></span></div>
+        <div class="humidity">Humidity <span id="humidity"></span></div>
+        <div class="description">Description</div>
 
-        <p class="temperature">Temperature <span>35</span></p>
-        <p class="humidity">Humidity <span>35</span></p>
-        <p class="description">Discription</p>
-
+        <div class="icons">
+          <div id="icon-container"></div>
+            <div id="temperature"></div>
+            <div id="weather-dis"> </div>
+        </div>
     </div>
 
 
