@@ -55,16 +55,16 @@ function displayWeatherInfo(data) {
         main: { temp, humidity },
         weather: [{ description, id }],
         wind: { speed } } = data;
-
+    document.getElementById('result').style.display = "block";
     document.getElementById('cityname').textContent = city;
     document.getElementById('temperature').textContent = `${(temp - 273.15).toFixed(1)} °C`;
     document.getElementById('weather-dis').textContent = description;
     document.getElementById('humidity').textContent = humidity;
     document.getElementById('wind').textContent = speed;
-    document.getElementById('icon-container').textContent = displyEmoji(id);
+    document.getElementById('icon-container').textContent = displayEmoji(id);
 }
 
-function displyEmoji(weatherId) {
+function displayEmoji(weatherId) {
     const icon = document.createElement('i');
     icon.className = "material-symbols-outlined";
 
@@ -73,16 +73,16 @@ function displyEmoji(weatherId) {
             icon.textContent = "thunderstorm";
             break;
         case (weatherId >= 300 && weatherId < 400):
-            icon.textContent = "sprinkle"; 
+            icon.textContent = "water_drop";
             break;
         case (weatherId >= 500 && weatherId < 600):
             icon.textContent = "rainy";
             break;
         case (weatherId >= 600 && weatherId < 700):
-            icon.textContent = "ac_unit"; 
+            icon.textContent = "ac_unit";
             break;
         case (weatherId >= 700 && weatherId < 800):
-            icon.textContent = "foggy"; 
+            icon.textContent = "foggy";
             break;
         case (weatherId === 800):
             icon.textContent = "sunny";
@@ -94,7 +94,9 @@ function displyEmoji(weatherId) {
             icon.textContent = "help";
     }
 
-    document.getElementById("icon-container").appendChild(icon);
+    const container = document.getElementById("icon-container");
+    container.innerHTML = "";
+    container.appendChild(icon);
 }
 
 
