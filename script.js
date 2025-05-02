@@ -59,7 +59,7 @@ function displayWeatherInfo(data) {
     document.getElementById('cityname').textContent = city;
     document.getElementById('temperature').textContent = `${(temp - 273.15).toFixed(1)} °C`;
     document.getElementById('weather-dis').textContent = description;
-    document.getElementById('humidity').textContent = humidity;
+    document.getElementById('humidity').textContent =`${humidity}%`;
     document.getElementById('wind').textContent = speed;
     document.getElementById('icon-container').textContent = displayEmoji(id);
 }
