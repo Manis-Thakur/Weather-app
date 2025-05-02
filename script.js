@@ -65,38 +65,34 @@ function displayWeatherInfo(data) {
 }
 
 function displayEmoji(weatherId) {
-    const icon = document.createElement('i');
-    icon.className = "material-symbols-outlined";
+
 
     switch (true) {
         case (weatherId >= 200 && weatherId < 300):
-            icon.textContent = "thunderstorm";
-            break;
-        case (weatherId >= 300 && weatherId < 400):
-            icon.textContent = "water_drop";
-            break;
-        case (weatherId >= 500 && weatherId < 600):
-            icon.textContent = "rainy";
-            break;
-        case (weatherId >= 600 && weatherId < 700):
-            icon.textContent = "ac_unit";
-            break;
-        case (weatherId >= 700 && weatherId < 800):
-            icon.textContent = "foggy";
-            break;
-        case (weatherId === 800):
-            icon.textContent = "sunny";
-            break;
-        case (weatherId > 800):
-            icon.textContent = "cloud";
-            break;
-        default:
-            icon.textContent = "help";
-    }
+            return "⛈️"
 
-    const container = document.getElementById("icon-container");
-    container.innerHTML = "";
-    container.appendChild(icon);
+        case (weatherId >= 300 && weatherId < 400):
+            return "🌦️";
+
+        case (weatherId >= 500 && weatherId < 600):
+            return "🌧️";
+
+        case (weatherId >= 600 && weatherId < 700):
+            return "🌨️";
+
+        case (weatherId >= 700 && weatherId < 800):
+            return "🌫️";
+
+        case (weatherId === 800):
+            return "☀️";
+
+        case (weatherId > 800):
+
+            return "☁️";
+
+        default:
+            return "❔"
+    }
 }
 
 

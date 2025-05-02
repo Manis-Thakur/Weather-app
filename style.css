@@ -116,7 +116,10 @@ body {
 }
 
 .result .icons {
-    margin-top: 20px;
+    margin-top: 5px;
+}
+.result .icons #icon-container{
+    font-size: 3rem;
 }
 
 .result .icons #temperature {
