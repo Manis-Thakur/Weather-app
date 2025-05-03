@@ -2,7 +2,7 @@ const week = document.getElementById('week');
 const getDate = document.getElementById('current-date');
 const cityInput = document.getElementById('cityInput');
 const submit = document.getElementById('submit');
-const apikey = "cec102e17cc7174fb9ecd05a60786421";
+const apikey = "";
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satday"];
 const monthsName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
