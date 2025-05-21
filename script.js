@@ -2,7 +2,7 @@ const week = document.getElementById('week');
 const getDate = document.getElementById('current-date');
 const cityInput = document.getElementById('cityInput');
 const submit = document.getElementById('submit');
-const apikey = "";
+const apikey = "cec102e17cc7174fb9ecd05a60786421";
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satday"];
 const monthsName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -27,7 +27,7 @@ submit.addEventListener("click", async event => {
             displayWeatherInfo(weatherData);
 
         } catch (error) {
-            console.log(error);
+          
             displayError(error);
         }
     } else {
@@ -41,7 +41,7 @@ async function getWeatherData(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
 
     const response = await fetch(apiUrl);
-    console.log(response);
+
     if (!response.ok) {
         throw new Error("could not fetch data");
     }
